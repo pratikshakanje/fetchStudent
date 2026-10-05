@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <title>Student CRUD using fetch</title>
+     <style>
+        .spinner{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.8);
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <h3 class="text-center py-2 bg-secondary text-white">Studnet CRUD using fetch</h3>
+
+    <div class="container my-4">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card bg-secondary">
+                    <div class="card-body ">
+                        <h5 class="text-center text-white"><u>Student Form</u></h5>
+                        <form id="formStd">
+                            <div class="form-group">
+                                <label for="fname" class="text-white">First Name:</label>
+                                <input type="text" id="fname" class="form-control bg-light" placeholder="Enter first name...">
+                            </div>
+                            <div class="form-group">
+                                <label for="lname" class="text-white">Last Name:</label>
+                                <input type="text" id="lname" class="form-control bg-light" placeholder="Enter last name...">
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="text-white">Email:</label>
+                                <input type="email" id="email" class="form-control bg-light" placeholder="Enter email...">
+                            </div>
+                            <div class="form-group">
+                                <label for="contact" class="text-white">Contact:</label>
+                                <input type="tel" id="contact" class="form-control bg-light" placeholder="Enter contact...">
+                            </div>
+                            
+                            <button type="submit" id="addStd" class="btn btn-sm btn-block btn-primary">Add Student</button>
+                            <button type="button" id="updateStd" class="btn btn-sm btn-block btn-success d-none">Update Student</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <table class="table table-bordered">
+                    <thead class="bg-secondary text-white">
+                        <tr>
+                            <th>Sr.no</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Email</th>
+                            <th>Contact</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableStd" class="bg-light text-center">
+                        <!-- <tr>
+                            <td>1</td>
+                            <td>Pratiksha</td>
+                            <td>Kanje</td>
+                            <td>pratikshakanje@gmail.com</td>
+                            <td>9098084866</td>
+                            <td><i class="fa-solid fa-pen-to-square fa-2x text-primary"></i></td>
+                            <td><i class="fa-solid fa-trash fa-2x text-danger"></i> </td>
+                        </tr> -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+     <div class="spinner d-none" id="spinner">
+        <div class="spinner-border text-info" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./assets/js/app.js"></script>
+</body>
+</html>
